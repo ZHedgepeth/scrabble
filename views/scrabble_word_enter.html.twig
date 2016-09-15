@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <title>Scrabble</title>
+    </head>
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="page-header">
+            <h1>Scrabble Score</h1>
+          </div>
+          <form action="/scrabble_score" method="get">
+            <div class="col-md-6">
+              <h3>Player One</h3>
+              <div class="form-group">
+                <label for="input-one">Enter a word</label>
+                <input id="input-one" name="input_one" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>Player Two</h3>
+                <div class="form-group">
+                  <label for="input-two">Enter a word</label>
+                  <input id="input-two" name="input_two" type="text" class="form-control">
+                </div>
+              </div>
+            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+          </form>
+        </div>
+      </div>
+    </body>
+</html>

@@ -30,7 +30,8 @@
         function checkScore()
         {
             $word_to_score = $this->getWord();
-            $letters = str_split($word_to_score);
+            $lowered_word = strtolower($word_to_score);
+            $letters = str_split($lowered_word);
             $value_one_letters = ["e", "a", "i", "o", "u", "l", "n", "r", "s", "t"];
             $value_two_letters = ["d", "g"];
             $value_three_letters= ["b","c","m","p"];
@@ -57,9 +58,19 @@
                 }
               }
             return $score;
+        }
 
+        // function chooseWinner()
+        // {
+        //     $player1Score = checkScore()
+        //
+        // }
+        //
+        // function givenLetters()
+        // {
+        //
+        // }
 
-    }
   }
 
 ?>
