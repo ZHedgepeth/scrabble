@@ -60,12 +60,7 @@
             return $score;
         }
 
-        // function chooseWinner()
-        // {
-        //     $player1Score = checkScore()
-        //
-        // }
-        //
+
         // function givenLetters()
         // {
         //

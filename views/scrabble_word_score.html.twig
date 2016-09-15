@@ -18,6 +18,15 @@
           </div>
           <div class="col-md-4">
             <form action="/">
+              {% if p1score > p2score %}
+                <h2>Player 1 Wins!</h2>
+              {% elseif p2score > p1score %}
+                <h2>Player 2 Wins!</h2>
+              {% elseif p2score == p1score %}
+                <h2>Draw!</h2>
+              {% else %}
+                <h2>Something is wrong, fix it!</h2>
+              {% endif %}
               <button type="submit" class="btn btn-success btn-lg">Home</button>
             </form>
           </div>
