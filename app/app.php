@@ -15,12 +15,16 @@
         $player_one_Score = new Scrabble($_GET["input_one"]);
         $word_one = $player_one_Score->getWord();
         $score1 = $player_one_Score->checkScore();
+        // $p_one_letters = $player_one_Score->p1Letters();
 
         $player_two_Score = new Scrabble($_GET["input_two"]);
         $word_two = $player_two_Score->getWord();
         $score2 = $player_two_Score->checkScore();
 
+
         return $app["twig"]->render("scrabble_word_score.html.twig", array("p1score" => $score1, "p2score" => $score2));
+
+
 
     });
 

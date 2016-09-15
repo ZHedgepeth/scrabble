@@ -3,11 +3,13 @@
     {
         private $word;
         private $score;
+        public $letters_players;
 
         function __construct($scrabble_word)
         {
             $this->word = $scrabble_word;
             $this->score = 0;
+            $this->letters_players = [];
         }
 
         function getWord()
@@ -46,25 +48,46 @@
 
             foreach($letters as $letter)
             {
-              for($index = 0; $index < count($all_values); $index++)
+                for($index = 0; $index < count($all_values); $index++)
                 {
-                  foreach($all_values[$index] as $letter_value)
-                  {
-                    if($letter === $letter_value)
+                    foreach($all_values[$index] as $letter_value)
                     {
-                        $score += $values[$index];
+                        if($letter === $letter_value)
+                        {
+                            $score += $values[$index];
+                        }
                     }
-                  }
                 }
-              }
+            }
             return $score;
         }
 
 
-        // function givenLetters()
-        // {
-        //
-        // }
+        function p1Letters()
+        {
+            $alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
+            $p_one_given_letters = array();
+            $p_two_given_letters = array();
+            for ($index = 0; $index <= 10; $index++)
+            {
+                $alphabet_index = rand(0, 23);
+                $player_letter = $alphabet[$alphabet_index];
+                 array_push($p_one_given_letters, $player_letter);
+            }
+        }
+
+        function p2Letters()
+        {
+            $alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
+            $p_two_given_letters = array();
+            for ($index = 0; $index <= 10; $index++)
+            {
+                $alphabet_index = rand(0, 23);
+                $player_letter = $alphabet[$alphabet_index];
+                 array_push($p_two_given_letters, $player_letter);
+            }
+
+        }
 
   }
 
